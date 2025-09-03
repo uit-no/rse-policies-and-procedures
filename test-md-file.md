@@ -1,4 +1,4 @@
-# Test Contract Agreement
+# Test Contract Agreement file
 This Contract Agreement ("Agreement") is entered into as of **[Date]**, by and between:
 **Party 1**: [Name of Party 1]  
 Address: [Address of Party 1]  
