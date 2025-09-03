@@ -1,0 +1,33 @@
+name: Generate PDF from Markdown
+on:
+  push:
+    paths:
+      - '*.md' # Trigger the workflow only when Markdown files are added or updated
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # Step 1: Check out the repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    # Step 2: Install Pandoc and WeasyPrint
+    - name: Install Pandoc and WeasyPrint
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc weasyprint
+    # Step 3: Convert Markdown to HTML and then to PDF
+    - name: Convert Markdown to PDF
+      run: |
+        for file in *.md; do
+          [ -e "$file" ] || continue
+          # Convert Markdown to HTML
+          pandoc "$file" -o "${file%.md}.html"
+          # Convert HTML to PDF using WeasyPrint
+          weasyprint "${file%.md}.html" "${file%.md}.pdf"
+        done
+    # Step 4: Upload the PDF as an artifact
+    - name: Upload PDF artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: pdf-files
+        path: '*.pdf'
