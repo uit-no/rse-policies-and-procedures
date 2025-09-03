@@ -1,4 +1,5 @@
-# Test Contract Agreement file
+# Test Contract Agreement
+
 This Contract Agreement ("Agreement") is entered into as of **[Date]**, by and between:
 **Party 1**: [Name of Party 1]  
 Address: [Address of Party 1]  
@@ -6,6 +7,7 @@ Address: [Address of Party 1]
 Address: [Address of Party 2]  
 
 ## Terms and Conditions
+
 1. **Scope of Work**  
    [Describe the scope of work or services to be provided.]
 2. **Payment Terms**  
@@ -18,6 +20,7 @@ Address: [Address of Party 2]
    [Specify the governing law for the contract.]
 
 ## Signatures
+
 By signing below, the parties agree to the terms and conditions outlined in this Agreement.
 ---
 **Party 1**  
